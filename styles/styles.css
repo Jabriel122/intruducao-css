@@ -9,21 +9,23 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: rgb(206, 206, 206);
+    background-color: #EDECED;
 }
 
 /* Configuração genéricas */
 
 .container-grid {
     width: 90%;
-    margin: 0 auto;
+    max-width: 1200px;  /* Limite maximo de largura*/
+    min-width: 992px; /* Limite minimo de largura*/
+    margin: 0 auto;  /* Limite minimo de largura*/
     /* background-color: purple; */
 }
 
 
 /***** Cabeçalho ******/
 header{
-    background-color: rgb(59, 59, 59);
+    background-color:  #676767;
 }
 header nav{
     width: 200px;
@@ -71,11 +73,13 @@ header h1 #Logoux {
 Main .colunas-flex{
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
-
+/* Saction com a class coluna1. Dando cor e separando as colunas */
 main .coluna1{
     width: 75%;
     background-color:white;
+    color: gray;
     display: flex;
     flex-direction: column;
     
@@ -85,21 +89,66 @@ main .coluna1{
 main .coluna1 #Lapis{
     width: 100%;
 }
+/* Saction com a class coluna1. Separando e colocando paragrafos nas colunas */
 
-main .coluna1 .titulo{
-    background-color: yellowgreen;
-    width: 100%;
-    margin-top: 15px;
-    margin-left: 15px;
-}
-    
-
-main .coluna2{
-    width: 20%;
-    background-color: greenyellow;
+p, h2 {
+    margin: 10px;
 }
 
+/* Aside. Separando melhor os articals  */
 main .coluna2{
     display: flex;
     flex-direction: column;
 }
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23%;
+}
+
+ /* article{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    color: gray;
+    padding: 10px;
+}  */
+
+main .divisao{
+    margin-top: 30px;
+    background-color: white;
+    padding: 30px; 
+}
+
+
+
+
+/***** Rodapé *****/
+
+footer{
+    background-color: #676767;
+    color: white;
+    position: absolute;  
+    bottom: 0%;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
+
+    /**Anotações**/
+    /* padding: 0; top right bottom left */
+    /* padding: 0 20px; top/ bottom right/left */
+    /* padding: 0 20px 40;  top right/ left bottom */
+    /* padding: 10px 10px 10px 10px;  top right bottom left */
+    /**Anotações**/
+
+    padding: 20px 0;
+
+}
+
+/* nesse código no footer, existe um truque: O código "Position: absolute;" faz o item não se mecher não importa o que e o código "Bottom: 0%" faz faz o item ficar preso lá em baixo. Ai complimentei com Width e height para finalizar o código */
